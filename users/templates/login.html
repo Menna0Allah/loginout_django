@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login dude</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    
+    <div class="container">
+        <h2>Login</h2>
+        <form method="POST">
+            {% csrf_token %}
+    
+            {% if messages %}
+                <div>
+                    {% for x in messages %}
+                        <script>
+                            alert('{{x}}');
+                        </script>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            <label>Username:</label>
+            <input 
+                type="text"
+                name="username"
+                required
+            >
+            <br>
+            <label>Password:</label>
+            <input 
+                type="password"
+                name="password"
+                required
+            >
+            <br>
+            <button type="submit">Enter</button>
+        </form>
+        <p>don't have an account? <a href="{% url 'register' %}">register now</a></p>
+    </div>
+</body>
+</html>
