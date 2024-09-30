@@ -14,17 +14,17 @@ body {
 }
 
 h1 {
-    color: #5f9ea0; /* لون مميز للعناوين */
-    text-align: center; /* توسيط العنوان */
+    color: #5f9ea0; 
+    text-align: center; 
 }
 
 form {
     width: 300px;
-    margin: 50px auto; /* توسيط النموذج في الصفحة */
+    margin: 50px auto; 
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff; /* خلفية بيضاء للنموذج */
+    background-color: #ffffff; 
 }
 
 input[type="text"], input[type="password"] {
